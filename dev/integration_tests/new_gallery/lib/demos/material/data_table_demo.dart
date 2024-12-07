@@ -1,3 +1,4 @@
+
 // Copyright 2014 The Flutter Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
@@ -150,7 +151,7 @@ class _DataTableDemoState extends State<DataTableDemo> with RestorationMixin {
               rowsPerPage: _rowsPerPage.value,
               onRowsPerPageChanged: (int? value) {
                 setState(() {
-                  _rowsPerPage.value = value!;
+                  _rowsPerPage.value = value;
                 });
               },
               initialFirstRowIndex: _rowIndex.value,

@@ -1,3 +1,4 @@
+
 // Copyright 2014 The Flutter Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
@@ -87,7 +88,7 @@ class MotionEventsBodyState extends State<MotionEventsBody> {
                 onPressed: () {
                   const StandardMessageCodec codec = StandardMessageCodec();
                   saveRecordedEvents(
-                    codec.encodeMessage(flutterViewEvents)!, context);
+                    codec.encodeMessage(flutterViewEvents), context);
                 },
               ),
             ),

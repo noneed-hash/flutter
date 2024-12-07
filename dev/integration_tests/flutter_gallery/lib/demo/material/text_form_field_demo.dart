@@ -1,3 +1,4 @@
+
 // Copyright 2014 The Flutter Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
@@ -100,7 +101,7 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
   final GlobalKey<FormFieldState<String>> _passwordFieldKey = GlobalKey<FormFieldState<String>>();
   final _UsNumberTextInputFormatter _phoneNumberFormatter = _UsNumberTextInputFormatter();
   void _handleSubmitted() {
-    final FormState form = _formKey.currentState!;
+    final FormState form = _formKey.currentState;
     if (!form.validate()) {
       _autovalidateMode = AutovalidateMode.always; // Start validating on every change.
       showInSnackBar('Please fix the errors in red before submitting.');
@@ -133,7 +134,7 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
 
   String? _validatePassword(String? value) {
     _formWasEdited = true;
-    final FormFieldState<String> passwordField = _passwordFieldKey.currentState!;
+    final FormFieldState<String> passwordField = _passwordFieldKey.currentState;
     if (passwordField.value == null || passwordField.value!.isEmpty) {
       return 'Please enter a password.';
     }
